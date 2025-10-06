@@ -17,7 +17,7 @@ components:
       mountSources: true
   - name: venv
     volume:
-      size: 35i
+      size: 35Gi
   - name: app-storage
     volume:
       size: 20Gi
