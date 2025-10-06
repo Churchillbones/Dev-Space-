@@ -6,18 +6,13 @@ components:
     container:
       image: registry.redhat.io/devspaces/udi-rhel9:3.22
       volumeMounts:
-        - name: venv
-          path: /home/user/.venv
         - name: app-storage
           path: /projects/app
-      memoryLimit: '8Gi'        # Increased from 2Gi to 8Gi
-      memoryRequest: '4Gi'      # Increased from 1Gi to 4Gi
-      cpuLimit: '4'             # Increased from 2 to 4
-      cpuRequest: '2'           # Increased from 1 to 2
+      memoryLimit: '8Gi'
+      memoryRequest: '4Gi'
+      cpuLimit: '4'
+      cpuRequest: '2'
       mountSources: true
-  - name: venv
-    volume:
-      size: 35Gi
   - name: app-storage
     volume:
-      size: 20Gi
+      size: 14Gi
